@@ -6,5 +6,4 @@ This repo contains all of the notes taken by [Jo](https://github.com/jo-wood) fo
 
 
 * [Week 1](/Week_1)
-  * Day 1(/Week_1/Day_1)
-  
+  * [Day 1](/Week_1/Day_1)
