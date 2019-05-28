@@ -1,15 +1,16 @@
 /*jshint esversion:6*/
 
-var fs = require('fs');
-var input = fs.readFileSync('./input.txt').toString();
-
-var numbersStrings = input.split('\n');
-
-var numberArray = [];
+var fs = require('fs'),
+    input = fs.readFileSync('./input.txt').toString(),
+    numbersStrings = input.split('\n'),
+    total = 0;
 
 for (var numStr of numbersStrings){
-  numberArray.push(parseInt(numStr, 10));
+  var number = parseInt(numStr, 10);
+
+  if(!isNaN(number)){
+      total += number;
+  }
 }
 
-//check if type is correct
-console.log(typeof numberArray[8]);
+console.log(total);

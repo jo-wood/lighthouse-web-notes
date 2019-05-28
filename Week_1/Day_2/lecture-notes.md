@@ -1,6 +1,8 @@
 # Advent of Code Challenge:
 
-[Summary of problem](https://adventofcode.com/2018/day/1)
+## Star 1:
+
+[Summary of problem part 1](https://adventofcode.com/2018/day/1)
 
 ### Initial Review of Problem & Questions
 
@@ -45,3 +47,69 @@ for (var numStr of numbersStrings){
 console.log(typeof numberArray[8]);
 ```
 - note the test case of of random indexes within the new array of numbers to ensure their type is correctly changed
+
+
+Now loop through to total the values (not efficient, should keep in original loop but this is for learning)
+
+- will see an error in termnal of `NaN`
+
+```javascript
+var fs = require('fs'),
+    input = fs.readFileSync('./input.txt').toString(),
+    numbersStrings = input.split('\n'),
+    numberArray = [],
+    total = 0;
+
+for (var numStr of numbersStrings){
+  numberArray.push(parseInt(numStr, 10));
+}
+
+for (var num of numberArray) {
+  total += num;
+}
+
+console.log(typeof total);
+```
+- google, node + how to check if a value is NaN
+- MDN `isNaN()` since `NaN === NaN` will return false (even though it is a numeric data type, it is undefined as a real number)
+
+- use debugger
+```javascript
+if(!isNaN(number)){
+  debugger;
+}
+```
+
+Therefore change first loop to ignore any instances where we are passing a NaN
+
+```javascript
+for (var numStr of numbersStrings){
+  var number = parseInt(numStr, 10);
+
+  if(!isNaN(number)){
+    numberArray.push(number);
+  }
+}
+```
+
+Improve the efficiency - an O(n) sln without using 2 loops would allow faster resolve. Within our `!isNaN` we are already holding the number, therefore instead of pushing into an array just start combining it to the total.
+
+var fs = require('fs'),
+    input = fs.readFileSync('./input.txt').toString(),
+    numbersStrings = input.split('\n'),
+    total = 0;
+```javascript
+for (var numStr of numbersStrings){
+  var number = parseInt(numStr, 10);
+
+  if(!isNaN(number)){
+      total += number;
+  }
+}
+
+console.log(total);
+```
+
+## Star 2
+
+[Summary of problem part 2](https://adventofcode.com/2018/day/1#part2)
