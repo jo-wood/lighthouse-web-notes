@@ -1,6 +1,6 @@
 # Advent of Code Challenge:
 
-*[jump to star 2 notes](## Star 2:)...*
+[jump to star 2 notes][## Star 2:]...
 
 ## Star 1:
 
