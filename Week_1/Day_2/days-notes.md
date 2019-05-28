@@ -2,8 +2,9 @@
 
 - [jump to scope](#regarding-scope)
 - [jump to error messages](#error-messages)
-
+---
 ### Regarding Scope
+
 
 If the inner declaration of a used the syntax of var, the alert would read '4' not the global value of '1'.
 
@@ -110,3 +111,11 @@ try {
 }
 console.log(e);
 ```
+---
+### Error messages
+
+
+**Unexpected token )**
+
+ SyntaxError: Unexpected token ) is a big hint. Unexpected token errors occur when JavaScript expected something that wasn't there, which frequently means we're missing a parenthesis, bracket or curly brace. In our case, we're missing a }.
+*** it may seem as though the pointed out syntax doesn't even seem to occur in our code ***
