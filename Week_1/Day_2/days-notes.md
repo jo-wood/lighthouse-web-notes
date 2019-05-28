@@ -2,6 +2,18 @@
 
 - [jump to scope](#regarding-scope)
 - [jump to error messages](#error-messages)
+General:
+
+- trouble-shooting, use console.log throughout code in order to start breaking the issues down (what IS working?). Then tackle what's not step by step.
+- **truthy/falsey**
+  - The following will execute as the if solves to *true*.
+  ```JavaScript
+      shoppingList = [];
+
+    if (!shoppingList.length) {
+    shoppingList.push('coconut milk');
+    }
+  ```
 ---
 ### Regarding Scope
 
