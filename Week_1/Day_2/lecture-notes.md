@@ -1,5 +1,7 @@
 # Advent of Code Challenge:
 
+*[jump to star 2 notes](## Star 2:)...*
+
 ## Star 1:
 
 [Summary of problem part 1](https://adventofcode.com/2018/day/1)
