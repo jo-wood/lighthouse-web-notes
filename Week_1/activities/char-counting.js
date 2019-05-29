@@ -25,4 +25,4 @@ return result;
 }
 
 
-console.log(countLetters('lighthouse is up! yo yo yo yo yo yo in the house'));
+console.log(countLetters('lighthouse is up yo yo yo yo yo yo in the house'));
