@@ -1,19 +1,41 @@
 // The second argument/parameter is expected to be a function
-function findWaldo(arr, found) {
-  arr.forEach((name) => {
-    if(name === "Waldo"){
-      found(arr.indexOf(name));
+
+// function refactored to use anoymous fn for the cb fn that is in fn call
+function findWaldo(arr, cb) {
+
+  arr.forEach((name, index) => {
+    if (name === "Waldo") {
+      cb(index);
     }
   })
 }
 
-function actionWhenFound(index) {
+findWaldo(["Alice", "Bob", "Waldo", "Winston"], function(index) {
   console.log("Found him at index: ", index);
-}
-
-findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
+});
 
 
+// function findWaldo(arr, found) {
+
+//     arr.forEach((name, index) => {
+//       if(name === "Waldo"){
+//         found(index);
+//       }
+//     })
+
+// // from PP, knew that the forEach allows index to get passed as well
+//   // arr.forEach((name) => {
+//   //   if(name === "Waldo"){
+//   //     found(arr.indexOf(name));
+//   //   }
+//   // })
+// }
+
+// function actionWhenFound(index) {
+//   console.log("Found him at index: ", index);
+// }
+
+// findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
 
   //refactor with forEach
   // for (var i = 0; i < arr.length; i++) {
