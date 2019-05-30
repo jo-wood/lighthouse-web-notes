@@ -43,7 +43,7 @@ var students = [{
 console.log(students);
 students.sort((objA, objB) => { 
   if (objA.name === objB.name){
-    return  (objA.age > objB.age);
+    return  (objA.age < objB.age);
   } else {
     return (objA.name > objB.name);
   } 
