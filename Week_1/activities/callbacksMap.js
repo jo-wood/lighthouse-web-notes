@@ -21,6 +21,8 @@ map(words, function (word) {
 });
 console.log(words)
 
+
+
 //expected output:
 
 // [6, 7, 2, 5, 3]
@@ -28,3 +30,27 @@ console.log(words)
 // ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]
 
 // ['dnuorg', 'lortnoc', 'ot', 'rojam', 'mot']
+
+
+
+//// trying with closures (they aren't always more clean)
+
+// var mapper = function (listOfThings) {
+//   return function (cb) {
+//     return map(listOfThings, cb)
+//   }
+// }
+
+// var wordsMapper = mapper(words)
+
+// wordsMapper(function (word) {
+//   return word.length;
+// });
+
+// wordsMapper(function (word) {
+//   return word.toUpperCase();
+// });
+
+// wordsMapper(function (word) {
+//   return word.split('').reverse().join('');
+// });

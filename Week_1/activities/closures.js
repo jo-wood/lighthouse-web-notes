@@ -1,26 +1,69 @@
 
-function makeLoadedDie() {
-  var list = [5, 4, 6, 1, 6, 4, 2, 3, 3, 5], 
-      index = 0;
+//*************** EXERCISE 2 COUNTDOWN*****************//
 
-  let roll = function () {
-       let result = list[index];
-       index++;
-      return result;
+var countdownGenerator = function (x) {
+  var y = x,
+      result;
+
+  return function() {
+    if (y > 0) {
+      result = 'T-minus ' + y + '...';
+    } else if (y === 0) {
+      result = 'Blast Off!';
+    } else {
+      result = 'Rockets alreadx gone, bub!';
+    }
+    console.log(result);
+  y--
   }
-  return roll;
-}
 
-var rollLoadedDie = makeLoadedDie();
+return rocketCount;
+};
 
-console.log(rollLoadedDie()); // 5
-console.log(rollLoadedDie()); // 4
-console.log(rollLoadedDie()); // 6
+var countdown = countdownGenerator(3);
+countdown(); // T-minus 3...
+countdown(); // T-minus 2...
+countdown(); // T-minus 1...
+countdown(); // Blast Off!
+countdown(); // Rockets already gone, bub!
+countdown(); // Rockets already gone, bub!
 
 
 
 
-//********** From the reading on closures:
+//*************** EXERCISE 1 LOADED DIE *****************//
+
+// function makeLoadedDie() {
+//   var list = [5, 4, 6, 1, 6, 4, 2, 3, 3, 5], 
+//       index = 0;
+
+//   let roll = function () {
+//     let result = list[index];
+//       if (index === (list.length)){
+//         index = 0;
+//         result = list[index];
+//       }
+//     index++;
+//     return result;
+//   }
+//   return roll;
+// }
+
+// var rollLoadedDie = makeLoadedDie();
+
+// console.log(rollLoadedDie()); // 5
+// console.log(rollLoadedDie()); // 4
+// console.log(rollLoadedDie()); // 6
+// console.log(rollLoadedDie()); 
+// console.log(rollLoadedDie()); 
+// console.log(rollLoadedDie()); 
+// console.log(rollLoadedDie()); 
+// console.log(rollLoadedDie()); 
+// console.log(rollLoadedDie());
+// console.log(rollLoadedDie());
+// console.log(rollLoadedDie()); // should be 5 at beginning again
+
+//** ///////   From the reading on closures:
 
 
 // function makeIdGenerator() {
