@@ -1,3 +1,8 @@
+
+//! need to adjust this code because it should account for the spaces, 
+//!   therefore the current index reference is off
+
+
 function indexLetters(str) {
 
   var chars = str.split(' ').join('');
@@ -11,6 +16,7 @@ function indexLetters(str) {
       result[chars[i]] = [i];
     }
   }
+
 
   return result;
 
