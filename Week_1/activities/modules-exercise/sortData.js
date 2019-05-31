@@ -1,15 +1,17 @@
 
 
-var sort = function(list){
+var runSort = function(arr){
 
-  if (typeof list[0] === 'string') {
-    return list.sort();
+  if (typeof arr[0] === 'string') {
+    return arr.sort();
   }
 
 }
 
 module.exports = {
 
-  runSort: sort(list)
-
+  sorted: function(list){
+    runSort(list);
+  return list;
+  }
 } // end exports

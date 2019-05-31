@@ -1,19 +1,20 @@
 
 
-var newList = require("./addToList");
+var newList = require("./addToList"),
+    list = newList.list,
+    sortData = require("./sortData"),
+    sorted = sortData.sorted;
 
-var updateList = {
-  list: function(newItem){
-    return newList.addItem(newItem);
-  }  
+    
+function runUpdate(item){
+  return newList.addItem(item);
 }
 
-var runUpdate = function(item){
-  return updateList.list(item)
-}
+runUpdate('l');
+runUpdate('b');
+runUpdate('z');
+runUpdate('e');
+runUpdate('a');
 
-console.log(runUpdate('l'));
-console.log(runUpdate('b'));
-console.log(runUpdate('z'));
-console.log(runUpdate('e'));
-console.log(runUpdate('a'));
+
+console.log(sorted(list));

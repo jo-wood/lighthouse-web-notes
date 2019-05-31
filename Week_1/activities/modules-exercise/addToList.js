@@ -1,12 +1,16 @@
-var list = [];
+var storedValues = [];
 
 module.exports = {
-
-  addItem: function (item) {
-      list.push(item);
-    return list;
-  }
-
-
-
+  list: storedValues,
+  addItem:  
+    function (item) {
+      storedValues.push(item);
+      return this.list;
+    }
 } //end exports
+
+
+// module.exports.addItem(2);
+// module.exports.addItem(4);
+
+
