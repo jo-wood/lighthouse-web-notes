@@ -14,6 +14,7 @@ findWaldo(["Alice", "Bob", "Waldo", "Winston"], function(index) {
   console.log("Found him at index: ", index);
 });
 
+var num = [1, 2, 3, 4, 5];
 
 // function findWaldo(arr, found) {
 
