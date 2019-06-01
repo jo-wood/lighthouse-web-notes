@@ -14,7 +14,7 @@ This repo contains all of the notes taken by [Jo](https://github.com/jo-wood) fo
 
 * Daily exercises and challenges
 
-  *[Week 1](/lighthouse-labs/activites/week-1)
+  * [Week 1](/lighthouse-labs/activites/week-1)
 
 ## [General](/lighthouse-labs/general-lighthouse)
 
