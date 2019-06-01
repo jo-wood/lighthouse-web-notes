@@ -178,3 +178,7 @@ console.log("Number has been returned from fn: ", numberReturned );
 
 ## Day 5 - Modules and Testing
 
+### npm and package.json:
+
+
+-
